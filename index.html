@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body{
+           background-color: rgb(215, 249, 249);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-middle">
+        <div class="container m-5 p-3 border border-4 rounded shadow bg-body" id="taskList">
+            <h5><i class="bi bi-list-task"></i> Task-List</h5>
+            <hr>
+            <div class="container p-3 d-flex justify-content-center align-middle">
+                <table class="table">
+                    <thead class="text-center">
+                        <tr>
+                            <th scope="col">Team Member</th>
+                            <th scope="col">Task</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center align-middle">
+                        <tr>
+                            <td class="p-3"><img src="Alice.jpg" alt="Alice profile" class="rounded-circle me-2" height="45" width="45"> Alice</td>
+                            <td class="p-3">Design homepage layout</td>
+                            <td class="p-3"><span class="badge bg-danger">High</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Bob.jpg" alt="Bob profile" class="rounded-circle me-2" height="45" width="45"> Bob</td>
+                            <td class="p-3">Implement user authentication</td>
+                            <td class="p-3"><span class="badge bg-danger">High</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Carol.jpg" alt="Carol profile" class="rounded-circle me-2" height="45" width="45"> Carol</td>
+                            <td class="p-3">Set up database schema</td>
+                            <td class="p-3"><span class="badge bg-warning">Medium</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Dave.jpg" alt="Dave profile" class="rounded-circle me-2" height="45" width="45"> Dave</td>
+                            <td class="p-3">Create API endpoints</td>
+                            <td class="p-3"><span class="badge bg-danger">High</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Eve.jpg" alt="Eve profile" class="rounded-circle me-2" height="45" width="45"> Eve</td>
+                            <td class="p-3">Design mobile responsiveness</td>
+                            <td class="p-3"><span class="badge bg-warning">Medium</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success  me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Frank.jpg" alt="Frank profile" class="rounded-circle me-2" height="45" width="45"> Frank</td>
+                            <td class="p-3">Write unit tests</td>
+                            <td class="p-3"><span class="badge bg-warning">Medium</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Grace.jpg" alt="Grace profile" class="rounded-circle me-2" height="45" width="45"> Grace</td>
+                            <td class="p-3">Develop user profile page</td>
+                            <td class="p-3"><span class="badge bg-warning">Medium</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Hank.jpg" alt="Hank profile" class="rounded-circle me-2" height="45" width="45"> Hank</td>
+                            <td class="p-3">Integrate third-party services</td>
+                            <td class="p-3"><span class="badge bg-success">Low</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="Irene.jpg" alt="Irene profile" class="rounded-circle me-2" height="45" width="45"> Irene</td>
+                            <td class="p-3">Conduct usability testing</td>
+                            <td class="p-3"><span class="badge bg-danger">High</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><img src="John.jpg" alt="John profile" class="rounded-circle me-2" height="45" width="45"> John</td>
+                            <td class="p-3">Optimize website performance</td>
+                            <td class="p-3"><span class="badge bg-success">Low</span></td>
+                            <td class="p-3">
+                                <button class="btn btn-outline-success me-3" data-bs-toggle="tooltip" title="Mark as complete">
+                                    <i class="bi bi-check2-square"></i>
+                                </button>
+                                <button class="btn btn-outline-danger me-3" data-bs-toggle="tooltip" title="Delete task">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               
+            </div>
+            <div class="container p-3 d-flex justify-content-center align-middle">
+                <button class="btn btn-danger text-center">
+                    Add Task
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+
+</html>
